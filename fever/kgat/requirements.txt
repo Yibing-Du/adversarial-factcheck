@@ -1,0 +1,13 @@
+torch==1.7.0
+transformers==4.5.0
+scikit-learn==0.24.1
+scipy==1.6.2
+pytorch-pretrained-bert==0.6.2
+fairseq==0.10.2
+sklearn
+pandas
+numpy
+tqdm
+gdown
+nltk
+jsonlines
