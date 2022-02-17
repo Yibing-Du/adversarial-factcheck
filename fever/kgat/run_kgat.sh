@@ -1,10 +1,3 @@
-cd roberta_large
-wget https://huggingface.co/roberta-large/resolve/main/pytorch_model.bin
-wget https://huggingface.co/roberta-large/resolve/main/merges.txt
-wget https://huggingface.co/roberta-large/resolve/main/vocab.json
-
-cd ../kgat
-
 for file in 'baseline' 'advadd_full' 'advadd_min'; do
 	python test.py \
 		--outdir ../output \

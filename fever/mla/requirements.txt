@@ -1,5 +1,5 @@
 --find-links https://download.pytorch.org/whl/torch_stable.html
-torch==1.8.0
+torch==1.8.0+cu111
 transformers==4.3.3
 pytorch-lightning==1.2.8
 tensorboard==2.2.0
@@ -9,3 +9,4 @@ black==20.8b1
 flake8
 pre-commit
 shellcheck-py
+gdown

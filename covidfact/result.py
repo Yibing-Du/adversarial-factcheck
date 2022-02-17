@@ -4,9 +4,9 @@ import numpy as np
 from sklearn.metrics import classification_report
 
 roberta = RobertaModel.from_pretrained(
-    './covidfact-roberta/',
+    '.',
     checkpoint_file='checkpoint_best.pt',
-    data_name_or_path='../RTE-covidfact-bin'
+    data_name_or_path='./RTE-covidfact-bin'
 )
 
 label_fn = lambda label: roberta.task.label_dictionary.string(
@@ -40,7 +40,7 @@ for file in files:
                     j += 1
             prediction = roberta.predict('sentence_classification_head', tokens).argmax().item()
             prediction_label = label_fn(prediction)
-            f.write(prediction_label+'\t'+target+'\n')
+            f.write('output/' + prediction_label+'\t'+target+'\n')
             pred.append(m[prediction_label])
             gold.append(m[target])
             ncorrect += int(prediction_label == target)
