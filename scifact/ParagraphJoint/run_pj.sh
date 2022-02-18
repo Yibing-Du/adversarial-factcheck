@@ -3,9 +3,10 @@ for corpus in 'baseline' 'advadd'; do
 	python ComputeBioSentVecAbstractEmbedding.py \
 		--claim_file ../data/claims_dev.jsonl \
 		--corpus_file ../data/corpus_${corpus}.jsonl \
-		--sentvec_path BioSentVec_PubMed_MIMICIII-bigram_d700.bin \
-		--corpus_embedding_pickle ./output/${corpus}/corpus_paragraph_biosentvec.pkl \
-		--claim_embedding_pickle ./output/${corpus}/claim_biosentvec.pkl
+		--sentvec_path BioSentVec_PubMed_MIMICIII-bigram_d700.bin
+
+	mv corpus_paragraph_biosentvec.pkl ./output/${corpus}
+	mv claim_biosentvec.pkl ./output/${corpus}
 
 	python SentVecAbstractRetriaval.py \
 		--claim_file ../data/claims_dev.jsonl \
@@ -27,3 +28,5 @@ for corpus in 'baseline' 'advadd'; do
 		--evaluate \
 		--checkpoint scifact_roberta_joint_paragraph_dynamic_fine_tune_ratio=6_lr=5e-6_bert_lr=1e-5_FEVER=5_scifact=12_downsample_good.model
 done
+
+cat prediction_dynamic.log
