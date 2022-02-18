@@ -1,1 +1,0 @@
-# kgat_pred_model.best.pt: https://drive.google.com/file/d/1RlFUVr_loIL0nJenhrtEAzqeBYfMrJ5S/view?usp=sharing
