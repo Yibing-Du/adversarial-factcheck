@@ -1,4 +1,4 @@
-# adversarial-factcheck
+# Synthetic Disinformation Attacks on Automated Fact Verification Systems
 
 arxiv link: 
 
