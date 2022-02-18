@@ -6,8 +6,8 @@ Original code can be found at https://github.com/jacklxc/ParagraphJointModel.
 
 ## Procedure
 
-Run setup.sh to download pretrained models, install sent2vec, and create output directories.
+- Run setup.sh to download pretrained models, install sent2vec, and create output directories.
 
-Run run_pj.sh to reproduce the experiment.
+- Run run_pj.sh to reproduce the experiment.
 
-Results would be found in output/baseline and output/advadd.
+- Results would be found in output/baseline and output/advadd.
